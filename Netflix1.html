@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title> Login page </title>
+        <link rel="stylesheet" href="cascading2.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+       
+    </head>
+    <body>      
+
+    <nav class="navbar"> 
+        
+         </nav>
+
+<div class="form-box">
+    <h1 id="title"> Sign Up</h1>
+    
+    <form>
+
+        <div class="input-group">
+            <div class="input-field" id="namefield">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Name">
+                </div>
+
+                <div class="input-field">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email">
+
+            </div>
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="password">
+                
+        </div>
+        <div> 
+        
+    </div>
+        <p>Forgot password <a href="#"> click here!</a></p>
+      
+        <div class="btn">
+            <button type="button" id="signupbtn">Sign Up</button>
+            <button type="button" class="disable" id="signinbtn">Sign in</button>
+
+        </div>
+    </form>
+<p>
+    <small>
+This page is protected by Google reCAPTCA to
+ensure yo're not a bot.
+        <a href="#" >Learn More..</a>
+    </small>
+</p>
+</div>
+
+</div> 
+<script> 
+
+
+let signupbtn= document.getElementById("signupbtn");
+let signinbtn= document.getElementById("signinbtn");
+let namefield= document.getElementById("namefield");
+let title= document.getElementById("title");
+
+signinbtn.onclick=function(){
+    namefield.style.maxHeight="0";
+    title.innerHTML="Sign In";
+    signupbtn.classList.add("disable");
+    signinbtn.classList.remove("disable");
+}
+signupbtn.onclick=function(){
+    namefield.style.maxHeight="60px";
+    title.innerHTML="Sign Up";
+    signinbtn.classList.add("disable");
+    signupbtn.classList.remove("disable");
+}
+
+
+
+</script>
+    </body>
+</html>
+
+
